@@ -7,7 +7,7 @@ Description:
 // VARIABLES YOU CAN ALTER...
 var canvasId         = "myDrawingCanvas";   // Id of the canvas element on the page the wheel is to be rendered on.
 var wheelImageName   = "prizewheel.png";	// File name of the image for the wheel.
-var spinButtonImgOn  = "spinred.png";		// Name / path to the images for the spin button.
+var spinButtonImgOn  = "spinRed.png";		// Name / path to the images for the spin button.
 var spinButtonImgOff = "spingray.png";
 var theSpeed         = 20; 		 // Controls how often the spin function is called (is milliseconds value for animation timer).
 var pointerAngle     = 0;  	 	 // The angle / location around the wheel where the pointer indicating the prize is located. Can be any value you like, 0 is top (12 o'clock) 180 is bottom (6 o'clock) etc.
