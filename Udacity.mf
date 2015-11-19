@@ -5,5 +5,7 @@ project-mobile.html
 project-webperf.html
 css/style.css
 js/perfmatters.js
-
-
+views/images/pizza.png
+views/images/pizzeria-min.100.jpg
+views/images/pizzeria-min.jpg
+views/images/pizzeria.jpg
