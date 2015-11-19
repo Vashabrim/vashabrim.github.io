@@ -10,11 +10,12 @@
 body {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   background: black;
+  font-size: 16px;
 }
 
 input {
   background: grey;
-  font-size: 18px;
+  
 }
 
 form {
