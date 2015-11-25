@@ -471,9 +471,8 @@ window.performance.mark("mark_start_generating"); // collect timing data
 // This for-loop actually creates and appends all of the pizzas when the page loads
 for (var i = 2; i < 100; i++) {
   var pizzasDiv = document.getElementById("randomPizzas");
-  pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
-
+pizzasDiv.appendChild(pizzaElementGenerator(i));
 // User Timing API again. These measurements tell you how long it took to generate the initial pizzas
 window.performance.mark("mark_end_generating");
 window.performance.measure("measure_pizza_generation", "mark_start_generating", "mark_end_generating");
@@ -502,12 +501,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-<<<<<<< HEAD
-  var items = document.getElementsByClassName('.mover');
-=======
-    //var items = document.querySelectorAll('.mover');
   var items = document.getElementsByClassName('mover');
->>>>>>> origin/master
   for (var i = 0; i < items.length; i++) {
       var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
       items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
