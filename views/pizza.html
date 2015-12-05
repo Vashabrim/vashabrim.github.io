@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" manifest="..\Udacity.mf">
+<html lang="en" manifest="../Udacity.mf">
 <head>
     <title>Epileptic Pizza</title>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="container" style="background-color: rgba(240, 60, 60, 0.8)">
+    <div class="container">
         <div id="header" class="row">
             <div class="col-md-6">
                 <div class="row">
@@ -139,8 +139,8 @@
         </div>
         <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
     </div>
-    <script async type="text/javascript" src="js/main.js"></script>
-    <script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <!--<script>
         var ba = function () {
             var k = document.createElement('script'); k.type = 'text/javascript';
             k.src = 'js/main.js';
@@ -151,7 +151,7 @@
             webkitRequestAnimationFrame || msRequestAnimationFrame;
         if (raf) raf(ba);
         else window.addEventListener('load', ba);
-    </script>
+    </script>-->
     <script>
         var cb = function () {
             var l = document.createElement('link'); l.rel = 'stylesheet';
