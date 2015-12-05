@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content=" Crazy Pizzeria ">
     <meta name="author" content=" Vashabrim ">
-    <link rel="stylesheet" async href="css/style.css" />
-    <script type="text/javascript" async src="js/main.js"></script>
-    <meta name="author" content=" Vashabrim "> 
+    <!--<link rel="stylesheet" async href="css/style.css" />
+    <script type="text/javascript" async src="js/main.js"></script>-->
+    <meta name="author" content=" Vashabrim ">
 </head>
 
 <body>
@@ -167,7 +167,41 @@
     </script>
     <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
 
-  <script type="text/javascript" src="js/main.js"></script>
-</body>
+    <script type="text/javascript" async src="js/main.js"></script>
+    <script>
+        var cb = function () {
+            var l = document.createElement('link'); l.rel = 'stylesheet';
+            l.href = 'css\style.css';
+            var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(cb);
+        else window.addEventListener('load', cb);
 
+    </script>
+    <script>
+        var dc = function () {
+            var m = document.createElement('link'); l.rel = 'stylesheet';
+            l.href = 'css\bootstrap-grid.min.css';
+            var i = document.getElementsByTagName('head')[0]; i.parentNode.insertBefore(m, i);
+        };
+        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+            webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) raf(dc);
+        else window.addEventListener('load', dc);
+    </script>
+    <script async src="js/perfmatters.js"></script>
+    <script async src="http://www.google-analytics.com/analytics.js"></script>
+    <script>
+        (function (w, g) {
+            w['GoogleAnalyticsObject'] = g;
+            w[g] = w[g] || function () { (w[g].q = w[g].q || []).push(arguments) }; w[g].l = 1 * new Date();
+        })(window, 'ga');
+
+        // TODO: replace with your Google Analytics profile ID.
+        ga('create', 'UA-69825320-Y');
+        ga('send', 'pageview');
+    </script>
+</body>
 </html>
