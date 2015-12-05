@@ -8,3 +8,4 @@ views/js/main.js
 css/style.css
 views/images/pizzeria.jpg
 views/css/style.css
+views/css/bootstrap-grid.min.css
