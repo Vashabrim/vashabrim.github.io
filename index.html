@@ -9,7 +9,7 @@
 
     <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" async>
+    <!--<link href="css/style.css" rel="stylesheet" async>-->
     <link href="css/print.css" rel="stylesheet" @media-type="print">
 
   </head>
@@ -71,5 +71,16 @@
     // TODO: replace with your Google Analytics profile ID.
     ga('create', 'UA-69825320-Y');
     ga('send', 'pageview');
+
+      var cb = function() {
+          var l = document.createElement('link'); l.rel = 'stylesheet';
+          l.href = 'style.css';
+          var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+      };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(cb);
+    else window.addEventListener('load', cb);
+ 
 </script>
 
