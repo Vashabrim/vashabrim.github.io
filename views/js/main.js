@@ -369,7 +369,7 @@ var pizzaElementGenerator = function(i) {
     pizzaDescriptionContainer = document.createElement("div");
 
     pizzaContainer.classList.add("mediumPizzaContainer");
-    // pizzaContainer.style.width = "33.33%";
+    pizzaContainer.style.width = "33.33%";
     pizzaContainer.style.height = "325px";
     pizzaContainer.id = "pizza" + i;                // gives each pizza element a unique id
     pizzaImageContainer.classList.add("col-md-6");
@@ -402,13 +402,13 @@ var resizePizzas = function(size) {
     function changeSliderLabel(size) {
         switch(size) {
             case "1":
-                document.querySelector("#pizzaSize").innerHTML = "Small";
-                return;
-            case "2":
-                document.querySelector("#pizzaSize").innerHTML = "Medium";
-                return;
-            case "3":
-                document.querySelector("#pizzaSize").innerHTML = "Large";
+                document.getElementById("pizzaSize").innerHTML = "Small";
+                return;  
+            case "2":    
+                document.getElementById("pizzaSize").innerHTML = "Medium";
+                return;  
+            case "3":    
+                document.getElementById("pizzaSize").innerHTML = "Large";
                 return;
             default:
                 console.log("bug in changeSliderLabel");
@@ -420,7 +420,7 @@ var resizePizzas = function(size) {
     // Returns the size difference to change a pizza element from one size to another. Called by changePizzaSlices(size).
     function determineDx (elem, size) {
         var oldwidth = elem.offsetWidth;
-        var windowwidth = document.querySelector("#randomPizzas").offsetWidth;
+        var windowwidth = document.getElementById("randomPizzas").offsetWidth; //changed to getElementById 
         var oldsize = oldwidth / windowwidth;
 
         // TODO: change to 3 sizes? no more xl?
@@ -554,7 +554,7 @@ function updatePositions() {
 window.addEventListener('scroll', onScroll);
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
-    var cols = 8;
+    var cols = 8
     var s = 256;
     // removed pizzas rendered off-screen for extra performance
     for (var i = 0; i < 100; i++) {
