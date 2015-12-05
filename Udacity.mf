@@ -5,3 +5,6 @@ views/images/pizza.png
 views/images/pizzeria-min.100.jpg
 views/images/pizzeria-min.jpg
 views/js/main.js
+css/style.css
+views/images/pizzeria.jpg
+views/css/style.css
