@@ -153,7 +153,8 @@
             webkitRequestAnimationFrame || msRequestAnimationFrame;
         if (raf) raf(cb);
         else window.addEventListener('load', cb);
-
+    </script>
+    <script>
         var dc = function () {
             var m = document.createElement('link'); m.rel = 'stylesheet';
             m.href = 'css/style.min.css';
