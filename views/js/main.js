@@ -471,8 +471,9 @@ window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
 function AppendPizza() {
-    for (var i = 2; i < 100; i++) {
-        var pizzasDiv = document.getElementById("randomPizzas");
+    var pizzasDiv = document.getElementById("randomPizzas"); //declared variable outside the for loop per code suggestion, and to increase performance.
+    for (var i = 2; i < 100; i++)
+    {
         pizzasDiv.appendChild(pizzaElementGenerator(i));
     }
 }
@@ -533,13 +534,14 @@ function updatePositions() {
     frame++;
     window.performance.mark("mark_start_frame");
 
-    var items = document.querySelectorAll('.mover');
+    var items = document.getElementsByClassName('mover'); //changed to getElementByClassName per suggestion. I forgot this one, as I changed other ones.
     var scrollNumber = document.body.scrollTop / 1250; // used in for loop, assigned outside of it for increased performance
 
-    for (var i = 0, len = items.length; i < len; i++) { // assigning the length to a variable increases performance
-        var phase = Math.sin(scrollNumber + (i % 5));
-        items[i].style.left = items[i].basicLeft + 100 * phase + 'px';   }
-
+    var phase = Math.sin(scrollNumber + (i % 5)); //place variable outside loop per suggestion
+    for (var i = 0, len = items.length; i < len; i++) // assigning the length to a variable increases performance
+    {
+        items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    }
     // User Timing API to the rescue again. Seriously, it's worth learning.
     // Super easy to create custom metrics.
     window.performance.mark("mark_end_frame");
@@ -557,15 +559,17 @@ document.addEventListener('DOMContentLoaded', function() {
     var cols = 8
     var s = 256;
     // removed pizzas rendered off-screen for extra performance
+    var elem;  //moved outside for loop because duh. Seems so obvious when somebody else looks at it :)
+    var movingPizzas = document.getElementById('movingPizzas1');
     for (var i = 0; i < 100; i++) {
-        var elem = document.createElement('img');
+        elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
         elem.style.height = "73.333px";
         elem.style.width = "73.333px";
         elem.basicLeft = (i % cols) * s;
         elem.style.top = (Math.floor(i / cols) * s) + 'px';
-        document.querySelector("#movingPizzas1").appendChild(elem);
-    }
+        movingPizzas.appendChild(elem);
+      }
     updatePositions();
 });

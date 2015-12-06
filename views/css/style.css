@@ -1,7 +1,7 @@
 /** {
   outline: 1px solid red !important;
 }*/
-* {
+.container {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -32,8 +32,8 @@ form {
 .mover {
     position: fixed;
     z-index: -1;
-    height = "100px";
-    width = "73.333px";
+    height: 100px;
+    width: 73.333px;
     
 }
 
