@@ -71,3 +71,13 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
 * <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
+
+### My Added ReadMe
+
+I used Optimizilla.com to compress and minify most of the images in this project, pizza.png would not compress.
+I could never get the ngrok and grunt stuff working on my machine, I chalked it up to the fact I'm using Windows 10, and the documentation hadn't been updated yet, so I used my github.io page
+so that PageSpeed Insights would run for the first page.
+
+After watching som office hour videos and doing some further reading, I did end up replacing the 'queryselector' with either getelementByClassName or getElementById, case depending to improve the performance
+of the animation, along with reducing the number of pizzas displayed, calculated by the screen size. 
+Also built a cache file to enable caching of images, css, and js files.
