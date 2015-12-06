@@ -138,9 +138,9 @@
             </div>
         </div>
         <div class="row">
-            <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
+            <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2015 Udacity</div>
         </div>
-        
+
     </div>
     <script type="text/javascript" src="js/main.min.js"></script>
     <script>
@@ -153,16 +153,15 @@
             webkitRequestAnimationFrame || msRequestAnimationFrame;
         if (raf) raf(cb);
         else window.addEventListener('load', cb);
-    </script>
-    <script>
+
         var dc = function () {
             var m = document.createElement('link'); m.rel = 'stylesheet';
             m.href = 'css/style.min.css';
-            var i = document.getElementsByTagName('head')[1]; i.parentNode.insertBefore(m, i);
+            var i = document.getElementsByTagName('head')[0]; i.parentNode.insertBefore(m, i);
         };
-        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        var rafb = requestAnimationFrame || mozRequestAnimationFrame ||
             webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) raf(dc);
+        if (rafb) rafb(dc);
         else window.addEventListener('load', dc);
     </script>
     <script async src="http://www.google-analytics.com/analytics.js"></script>
