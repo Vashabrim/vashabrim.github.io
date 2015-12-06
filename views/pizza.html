@@ -143,18 +143,6 @@
         
     </div>
     <script type="text/javascript" src="js/main.min.js"></script>
-    <!--<script>
-        var ba = function () {
-            var k = document.createElement('script'); k.type = 'text/javascript';
-            k.src = 'js/main.js';
-            var g = document.getElementsByTagName('head')[0]; g.parentNode.insertBefore(k, g);
-
-        };
-        var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-            webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) raf(ba);
-        else window.addEventListener('load', ba);
-    </script>-->
     <script>
         var cb = function () {
             var l = document.createElement('link'); l.rel = 'stylesheet';
@@ -170,7 +158,7 @@
         var dc = function () {
             var m = document.createElement('link'); m.rel = 'stylesheet';
             m.href = 'css/style.min.css';
-            var i = document.getElementsByTagName('head')[0]; i.parentNode.insertBefore(m, i);
+            var i = document.getElementsByTagName('head')[1]; i.parentNode.insertBefore(m, i);
         };
         var raf = requestAnimationFrame || mozRequestAnimationFrame ||
             webkitRequestAnimationFrame || msRequestAnimationFrame;
@@ -178,7 +166,7 @@
         else window.addEventListener('load', dc);
     </script>
     <script async src="http://www.google-analytics.com/analytics.js"></script>
-    <!--<script>
+    <script>
         (function (w, g) {
             w['GoogleAnalyticsObject'] = g;
             w[g] = w[g] || function () { (w[g].q = w[g].q || []).push(arguments) }; w[g].l = 1 * new Date();
@@ -187,6 +175,6 @@
         // TODO: replace with your Google Analytics profile ID.
         ga('create', 'UA-69825320-Y');
         ga('send', 'pageview');
-    </script>-->
+    </script>
 </body>
 </html>
