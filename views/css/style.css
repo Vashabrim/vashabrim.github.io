@@ -1,7 +1,7 @@
 /** {
   outline: 1px solid red !important;
 }*/
-.container {
+html > /**/ body .container {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
