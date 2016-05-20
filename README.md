@@ -1,83 +1,95 @@
-## Website Performance Optimization portfolio project
+## How do I complete this project?
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+1. Go to the [Javascript Basics course](https://www.udacity.com/course/ud804) and select "View Course Materials."
+2. Go through the videos and assignments in this course to learn the JavaScript necessary to build your resume.
+3. Review your work against the Project Rubric (on the next page).
+4. When you are satisfied with your project, submit it according to the Submission Instructions on the next page.
 
-To get started, check out the repository, inspect the code,
+### By the end:
+Your resume will look something like this
+![](http://i.imgur.com/pWU1Xbl.png)
 
-### Getting started
+And your repository will include the following files:
 
-####Part 1: Optimize PageSpeed Insights score for index.html
+* **index.html**: The main HTML document. Contains links to all of the CSS and JS resources needed to render the resume, including resumeBuilder.js.
+* **js/helper.js**: Contains helper code needed to format the resume and build the map. It also has a few function shells for additional functionality. More on helper.js further down.
+* **js/resumeBuilder.js**: This file is empty. You should write your code here.
+* **js/jQuery.js**: The jQuery library.
+* **css/style.css**: Contains all of the CSS needed to style the page.
+* **README.md**: 
+The GitHub readme file.
+* and some images in the images directory.
 
-Some useful tips to help you get started:
+## Your starting point...
+### js/helper.js
+Within helper.js, you’ll find a large collection of strings containing snippets of HTML. Within many snippets, you’ll find placeholder data in the form of `%data%` or `%contact%`.
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
+Each string has a title that describes how it should be used. For instance, `HTMLworkStart` should be the first `<div>` in the Work section of the resume. `HTMLschoolLocation` contains a `%data%` placeholder which should be replaced with the location of one of your schools.
 
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
+### Your process:
+The resume has four distinct sections: work, education, projects and a header with biographical information. You’ll need to:
 
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
+1. Build four JSONs, each one representing a different resume section. The objects that you create need to follow the names within the schema below exactly. Make sure your JSONs are formatted correctly using <a href="http://jsonlint.com/" target="_blank">JSONlint.com</a>.
 
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ngrok 8080
-  ```
+* `bio` contains:
+        
+            name : string
+            role : string
+            contacts : an object with
+                  mobile: string
+                  email: string 
+                  github: string
+                  twitter: string 
+                  location: string
+            welcomeMessage: string 
+            skills: array of strings
+            biopic: url
+            display: function taking no parameters
 
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
+* `education` contains:
+      
+            schools: array of objects with
+                 name: string
+                 location: string
+                 degree: string
+                 majors: array of strings
+                 dates: integer (graduation date)
+                 url: string
+            onlineCourses: array with
+                 title: string
+                 school: string
+                 date: integer (date finished)
+                 url: string
+            display: function taking no parameters
 
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
+* `work` contains
+          
+            jobs: array of objects with
+                 employer: string 
+                 title: string 
+                 location: string 
+                 dates: string (works with a hyphen between them)
+                 description: string 
+            display: function taking no parameters
 
-####Part 2: Optimize Frames per Second in pizza.html
+* `projects` contains:
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+            projects: array of objects with
+                  title: string 
+                  dates: string (works with a hyphen between them)
+                  description: string
+                  images: array with string urls
+            display: function taking no parameters
 
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
-
-### Optimization Tips and Tricks
-* [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
-* [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
-* [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
-* [Avoiding Rendering Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css.html "render blocking css")
-* [Optimizing JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript.html "javascript")
-* [Measuring with Navigation Timing](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/measure-crp.html "nav timing api"). We didn't cover the Navigation Timing API in the first two lessons but it's an incredibly useful tool for automated page profiling. I highly recommend reading.
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads.html">The fewer the downloads, the better</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html">Reduce the size of text</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
-
-### Customization with Bootstrap
-The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
-
-* <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
-* <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
-
-### Sample Portfolios
-
-Feeling uninspired by the portfolio? Here's a list of cool portfolios I found after a few minutes of Googling.
-
-* <a href="http://www.reddit.com/r/webdev/comments/280qkr/would_anybody_like_to_post_their_portfolio_site/">A great discussion about portfolios on reddit</a>
-* <a href="http://ianlunn.co.uk/">http://ianlunn.co.uk/</a>
-* <a href="http://www.adhamdannaway.com/portfolio">http://www.adhamdannaway.com/portfolio</a>
-* <a href="http://www.timboelaars.nl/">http://www.timboelaars.nl/</a>
-* <a href="http://futoryan.prosite.com/">http://futoryan.prosite.com/</a>
-* <a href="http://playonpixels.prosite.com/21591/projects">http://playonpixels.prosite.com/21591/projects</a>
-* <a href="http://colintrenter.prosite.com/">http://colintrenter.prosite.com/</a>
-* <a href="http://calebmorris.prosite.com/">http://calebmorris.prosite.com/</a>
-* <a href="http://www.cullywright.com/">http://www.cullywright.com/</a>
-* <a href="http://yourjustlucky.com/">http://yourjustlucky.com/</a>
-* <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
-* <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
-* <a href="http://www.84colors.com/portfolio.html">http://www.84colors.com/portfolio.html</a>
-
-### My Added ReadMe
-
-I used Optimizilla.com to compress and minify most of the images in this project, pizza.png would not compress.
-I could never get the ngrok and grunt stuff working on my machine, I chalked it up to the fact I'm using Windows 10, and the documentation hadn't been updated yet, so I used my github.io page
-so that PageSpeed Insights would run for the first page.
-
-After watching som office hour videos and doing some further reading, I did end up replacing the 'queryselector' with either getelementByClassName or getElementById, case depending to improve the performance
-of the animation, along with reducing the number of pizzas displayed, calculated by the screen size. 
-Also built a cache file to enable caching of images, css, and js files.
+2. Iterate through each JSON and append its information to index.html in the correct section.
+ * First off, you’ll be using jQuery’s `selector.append()` and `selector.prepend()` functions to modify index.html. `selector.append()` makes an element appear at the end of a selected section. `selector.prepend()` makes an element appear at the beginning of a selected section.
+   * Pay close attention to the ids of the `<div>`s in index.html and the HTML snippets in helper.js. They’ll be very useful as jQuery selectors for `selector.append()` and `selector.prepend()`
+* You’ll also be using the JavaScript method `string.replace(old, new)` to swap out all the placeholder text (e.g. `%data%`) for data from your resume JSONs.
+* Here’s an example of some code that would add the location of one your companies to the page:
+   * `var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);`
+   * `$(".work-entry:last").append(formattedLocation);`
+ * Use the mockup at the page of this document as a guide for the order in which you should append elements to the page.
+3. The resume includes an interactive map. To add it, append the googleMap string to `<div id=”mapDiv”>`.
+4. All of your code for adding elements to the resume should be within functions. And all of your functions should be encapsulated within the same objects containing your resume data. For instance, your functions for appending work experience elements to the page should be found within the same object containing data about your work experience.
+5. Your resume should also `console.log()` information about click locations. On line 90 in helper.js, you’ll find a jQuery onclick handler that you’ll need to modify to work with the `logClicks(x,y)` function above it.
+6. It’s possible to make additional information show up when you click on the pins in the map. Check out line 174 in helper.js and the Google Maps API to get started.

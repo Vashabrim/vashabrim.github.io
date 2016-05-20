@@ -1,97 +1,67 @@
-﻿<!DOCTYPE html>
-<html lang="en" manifest="Udacity.mf">
-<head>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- This tells the browser how to read the document. -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=" FILL ME IN ">
-    <meta name="author" content=" FILL ME IN ">
-    <title>Cameron Pittman: Portfolio</title>
+    <!-- Tells the browser what the title of this page should be. -->
+    <title>Resume</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="js/jQuery.js"></script>
+    <script src="js/helper.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <meta name="viewport" content="width=device-width">
+  </head>
+    <body unresolved>
+      <div id="main">
+        <div id="header" class="center-content clearfix">
+          <ul id="topContacts" class='flex-box'></ul>
+        </div>
+        <div style='clear: both;'>
+        </div>
+        <div id="workExperience" class="gray">
+          <h2>Work Experience</h2>
+        </div>
+        <div id="projects" class="dark-gray">
+          <h2>Projects</h2>
+        </div>
+        <div id="education" class="gray">
+          <h2>Education</h2>
+        </div>
+        <div id="mapDiv" class="dark-gray">
+          <h2>Where I've Lived and Worked</h2>
+        </div>
+        <div id="letsConnect" class='dark-gray'>
+          <h2 class='orange center-text'>Let's Connect</h2>
+          <ul id="footerContacts" class="flex-box">
+          </ul>
+        </div>
+      </div>
 
-    <!-- Hmm, what is the impact of web fonts on speed? Measure it... -->
-    <!--<link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />-->
-    <!--<link href="css/style.css" rel="stylesheet" async>-->
-    <!--<link href="css/print.css" rel="stylesheet" @media-type="print">-->
-    <style>
-        .hero {
-            padding: 2em;
-            background-color: #f8f8f8;
-            font-size: 1.2em;
-            border-bottom: 1px solid #ccc;
-            border-top: 1px solid #ccc;
+   <script src="js/resumeBuilder.js"></script>  
+  <script type="text/javascript">
+
+        if(document.getElementsByClassName('flex-item').length === 0) {
+        document.getElementById('topContacts').style.display = 'none';
         }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <a href="/"><img src="img/profilepic-min.jpg"></a>
-        <p>Cameron Pittman<br><span>Course Developer</span></p>
-    </header>
-
-    <div class="container">
-        <div class="hero">
-            <strong>I love web development!</strong> This is a template for a simple portfolio. I decided to use it to showcase a few Udacity courses I've taken and some teaching work, but you can use it to showcase any kind of project that you want the world to see :) <br> Contact me: me@email.com
-        </div>
-
-        <div class="content">
-            <ul>
-                <li>
-                    <img src="https://lh4.ggpht.com/kJEnfqhPvtm4m3EneSZ4fWYGS8lW4YNhEjk6zPkyrQaBUHc-2Y_ElDic99NHI0h-UBLXVbRCjFybFvrWxdk=s100">
-                    <a href="project-2048.html">Build Your Own 2048!</a>
-                    <p>I made my own version of 2048. How cool is that!?</p>
-                </li>
-
-                <li>
-                    <img src="https://lh6.ggpht.com/f_0W8h__3G99CWTjnMjD8BUKm7yp2-wJyApLtTwFoFtlal2ULf_JgHIsOQq2NiYfKOdMlXlMHDKNo5XVZLs=s100">
-                    <a href="project-webperf.html">Website Performance Optimization</a>
-                    <p>Hey... this class looks familiar.</p>
-                </li>
-
-                <li>
-                    <img src="https://lh5.ggpht.com/IKdCmTWn8a2nMhlwMYzryvzRN5CUZAOBr4tDrEAbszV7TIFe9pRAInA4kkYcgTXwrifJsBEsq1agTueuu-g=s100">
-                    <a href="project-mobile.html">Mobile Web Development</a>
-                    <p>Making mobile apps isn't so hard after all.</p>
-                </li>
-
-                <li>
-                    <img src="views/images/pizzeria-min.100.jpg">
-                    <a href="views/pizza.html">Cam's Pizzeria</a>
-                    <p>Who wants a performant pizza?</p>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; Web Performance 2014 <span id="crp-stats"></span></p>
-    </footer>
-    <script>
-    var cb = function () {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'css/style.min.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-    };
-    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-        webkitRequestAnimationFrame || msRequestAnimationFrame;
-    if (raf) raf(cb);
-    else window.addEventListener('load', cb);
-
-    </script>
-
-    <script async src="js/perfmatters.js"></script>
-    <script async src="http://www.google-analytics.com/analytics.js"></script>
-    <script>
-
-        (function (w, g) {
-            w['GoogleAnalyticsObject'] = g;
-            w[g] = w[g] || function () { (w[g].q = w[g].q || []).push(arguments) }; w[g].l = 1 * new Date();
-        })(window, 'ga');
-
-        // TODO: replace with your Google Analytics profile ID.
-        ga('create', 'UA-69825320-Y');
-        ga('send', 'pageview');
-    </script>
-
-</body>
+        if(document.getElementsByTagName('h1').length === 0) {
+        document.getElementById('header').style.display = 'none';
+        }
+        if(document.getElementsByClassName('work-entry').length === 0) {
+        document.getElementById('workExperience').style.display = 'none';
+        }
+        if(document.getElementsByClassName('project-entry').length === 0) {
+        document.getElementById('projects').style.display = 'none';
+        }
+        if(document.getElementsByClassName('education-entry').length === 0) {
+        document.getElementById("education").style.display = "black";
+                }
+        if(document.getElementsByClassName('flex-item').length === 0) {
+        document.getElementById('letsConnect').style.display = 'none';
+        }
+        if(document.getElementById('map') === null) {
+        document.getElementById('mapDiv').style.display = 'none';
+        }
+      </script>
+  </body>
 </html>

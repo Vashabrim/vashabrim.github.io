@@ -1,54 +1,243 @@
-html {
-  font-size: 100%;
-  overflow-y: scroll;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: none;
-}
-body { 
-	font-family: 'Open Sans', sans-serif; color: #333;
-	margin: 0;
-	font-size: 14px;
-	line-height: 1.61; 
-	font-weight: 400; 
-	background: #fff; }
-	
-a { color: #12C; }
-a:visited { color: #61C; }
-a:focus { outline: thin dotted; }
-a:hover, a:active { color: #c00; outline: 0; }
-
-b, strong { font-weight: bold; }
-pre, code { font-family: monospace, monospace; font-size: 1em; }
-ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
-img { border: 0; max-width: 100%; }
-
-/* body { background: #fff; } moved to main body css */
-header, footer, .container { max-width: 45em; margin: 0 auto; }
-
-header { padding: 0 0.5em; color: #C90B0B; }
-header img { border-radius: 40px; float: left; }
-header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
-header p span { font-size: 0.8em; font-weight: normal;}
-
-.hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
-  border-bottom: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+* {
+  padding:0;
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 2px #171C1A;
 }
 
-.content { padding: 1em 1em; }
-.content li { list-style-type: none; font-size: 1.1em;}
-li img { float:left; padding-right: 1em; }
-li p { font-size: 0.9em; font-style: italic; }
-
-footer {
-  padding: 0 0.5em;
-  border-top: 1px solid #ccc;
+.clearfix {
+  overflow: auto;
 }
-footer span { float: right; font-style: italic; }
 
-/* Smartphones (portrait) */
-@media only screen and (max-width: 480px) {
-  body { font-size: 12px;}
-  header p { padding-left: 4.5em;}
+.education-entry, .work-entry, .project-entry {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+h1 {
+  font-size: 40px;
+  color: #C3FF71;
+  line-height: 48px;
+  display: inline;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  color: #5CBDA2;
+  line-height: 29px;
+  padding: 10px;
+}
+
+h3 {
+  font-style: italic;
+  font-size: 20px;
+  color: #5CBDA2;
+  line-height: 22px;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 14px;
+  color: #4A4A4A;
+  line-height: 17px;
+}
+
+h2, h3, h4, h5 {
+  padding:10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+.date-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #85C645;
+  line-height: 16px;
+  float: left;
+}
+
+.location-text {
+  font-style: italic;
+  font-size: 14px;
+  color: #85C645;
+  line-height: 16px;
+  float: right;
+
+}
+
+p {
+  font-size: 14px;
+  color: #BEF0A6;
+  line-height: 21px;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+
+.welcome-message {
+  font-style: italic;
+  font-size: 18px;
+  color: #96D8C6;
+  line-height: 28px;
+}
+
+#skillsH3 {
+  color: #BCEB22;
+  display: none;
+}
+
+.orange {
+  background-color: #20251E;
+}
+
+.orange-text {
+  color: #C3FF71;
+}
+
+.white-text {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.gray {
+  background-color: #272921;
+  padding-bottom: 10px;
+  clear:both;
+}
+
+.dark-gray {
+  background-color: #20251E;
+}
+
+#header {
+  background: url('../images/line_pattern_green_light_76355_1280x960.jpg') #20251E;
+  background-size: 100%;
+  background-repeat: no-repeat; 
+  background-position: 0 -150px;
+}
+
+.flex-box {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.center-content {
+  padding-top: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2.5%
+}
+
+.role {
+  padding-left: 1%;
+  font-weight: bold;
+  font-size: 20px;
+  font-style: italic;
+  color: #FFFFFF;
+}
+ul {
+  list-style-type: none;
+}
+
+.biopic {
+  float: left;
+  padding: 10px;
+  width: 200px;
+  display: none;
+}
+
+img {
+  padding: 10px;
+}
+
+/* Bar chart stuff */
+.chart div {
+  font: 10px sans-serif;
+  background-color: #4A4A4A;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  height: 12px;
+  color: white;
+  display: inline-block;
+}
+
+span {
+  padding: 5px;
+}
+
+#letsConnect {
+  text-align: center;
+}
+
+button {
+  display: inline;
+  font-size: 25px;
+  font-weight: thin;
+  text-transform: uppercase;
+  padding: 20px, 25px;
+  margin: 0, auto;
+  color: #E8FAAD;
+  background-color: #018863;
+  background: -webkit-linear-gradient(#018863, #5CBDA2);
+  background: linear-gradient(#018863, #5CBDA2);
+  border: 0, none;
+  border-radius: 5px;
+  text-shadow: 0 -1px 0 #171C1A;
+  box-shadow: 0 1px 0 #20251E, 0 5px 0 #171C1A, 0 6px 6px rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+  #letsConnect {
+    margin-top: 5%;
+  }
+}
+
+@media only screen and (max-width:900px) {
+  .biopic {
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  #letsConnect {
+    margin-top: 10%;
+  }
+  .biopic {
+    width: 150px;
+  }
+  .welcome-message {
+    display: none;
+  }
+}
+
+#map {
+  display: block;
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#mapDiv {
+  height: 400px;
+  width: 100%;
+  margin: auto;
+  padding-bottom: 5%;
+}
+
+@media only screen and (min-width: 750px) {
+  #skillsH3,
+  .biopic {
+    display: block;
+  }
 }
