@@ -1,7 +1,7 @@
 var bio = {
 	"name" : "Doug Stubbs",
 	"role" : "Web Developer",
-	"bioPic" : "images/BMF.jpg",
+	"bioPic" : "images/bmf.jpg",
 	"welcomeMessage" : "An experienced IT professional with proven skills in web development, desktop support, and helpdesk. Self-starter with a passion to initiate action through concise communication and collaboration within a team environment. A non-stop learner.",
 	"contacts" : [{
 		"mobile" : "515-867-5309",
@@ -19,10 +19,17 @@ var bio = {
 var work = {
 	"jobs" : [
 	{
+		"employer" : "TMC Transportation",
+		"title" : "Software Developer",
+		"location" : "Ankeny, IA",
+		"dates" : "2015 - ",
+		"description" : "Developing custom software for in house application to manage all facets of the business of the company using .Net C#, JavaScript and SQL."
+	}
+	{
 		"employer" : "Nationwide Insurance",
 		"title" : "Senior Analyst",
 		"location" : "Des Moines, IA",
-		"dates" : "2011-",
+		"dates" : "2011-2015",
 		"description" : "Primary responsibilities included desktop support, as well as support of corporate customer base. Enhanced team engagement by creating a web based activity for use after staff meetings. The project increased engagement, as well as attention and focus for the team during meetings"
 	},
 	{
