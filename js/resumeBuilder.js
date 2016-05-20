@@ -24,7 +24,7 @@ var work = {
 		"location" : "Ankeny, IA",
 		"dates" : "2015 - ",
 		"description" : "Developing custom software for in house application to manage all facets of the business of the company using .Net C#, JavaScript and SQL."
-	}
+	},
 	{
 		"employer" : "Nationwide Insurance",
 		"title" : "Senior Analyst",
