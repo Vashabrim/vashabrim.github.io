@@ -1,7 +1,7 @@
 var bio = {
 	"name" : "Doug Stubbs",
 	"role" : "Web Developer",
-	"bioPic" : "images/bmf.jpg",
+	"bioPic" : "images/bmf.JPG",
 	"welcomeMessage" : "An experienced IT professional with proven skills in web development, desktop support, and helpdesk. Self-starter with a passion to initiate action through concise communication and collaboration within a team environment. A non-stop learner.",
 	"contacts" : [{
 		"mobile" : "515-867-5309",
