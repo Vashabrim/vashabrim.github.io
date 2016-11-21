@@ -116,10 +116,10 @@ var projects = {
 		"images":"images/Capture.PNG"
 	},
 	{
-		"title" : "Red Team Prize Bingo",
-		"dates" : "2012-2014",
-		"description" : "Red Team prize wheel that you spin to win prizes",
-		"images" : "images/redteam.png"
+		"title" : "DX Transportation Management System",
+		"dates" : "2015-",
+		"description" : "TMC Transportation proprietary software",
+		"images": ""
 	}
 	]
 };
