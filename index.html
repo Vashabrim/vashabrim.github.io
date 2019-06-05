@@ -7,9 +7,9 @@
     <title>Resume</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <script src="js/jQuery.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/helper.js"></script>
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyApBXtCIJPl1a45iHjuUfny9cZFg-PYcxU"></script>
+    <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyApBXtCIJPl1a45iHjuUfny9cZFg-PYcxU"></script> -->
     <meta name="viewport" content="width=device-width">
   </head>
     <body unresolved>
@@ -28,9 +28,9 @@
         <div id="education" class="gray">
           <h2>Education</h2>
         </div>
-        <div id="mapDiv" class="dark-gray">
+        <!--<div id="mapDiv" class="dark-gray">
           <h2>Where I've Lived and Worked</h2>
-        </div>
+        </div>-->
         <div id="letsConnect" class='dark-gray'>
           <h2 class='orange center-text'>Let's Connect</h2>
           <ul id="footerContacts" class="flex-box">
@@ -59,9 +59,9 @@
         if(document.getElementsByClassName('flex-item').length === 0) {
         document.getElementById('letsConnect').style.display = 'none';
         }
-        if(document.getElementById('map') === null) {
-        document.getElementById('mapDiv').style.display = 'none';
-        }
+//        if(document.getElementById('map') === null) {
+//        document.getElementById('mapDiv').style.display = 'none';
+//        }
       </script>
   </body>
 </html>

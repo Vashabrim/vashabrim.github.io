@@ -150,10 +150,10 @@ bio.display = function() {
 		var formattedEmail = HTMLemail.replace("%data%", bio.contacts[contact].email);
 		var formattedLocation = HTMLlocation.replace("%data%", bio.contacts[contact].location);
 		var formattedGit = HTMLgithub.replace("%data%", bio.contacts[contact].github);
-		var formattedTweety = HTMLtwitter.replace("%data%", bio.contacts[contact].twitter);
+		// var formattedTweety = HTMLtwitter.replace("%data%", bio.contacts[contact].twitter);
 		var formattedlinkedIn = HTMLlinkedIn.replace("%data%", bio.contacts[contact].linkedIn);
 		$("#topContacts").append(formattedMobile, formattedEmail,formattedLocation);
-		$("#footerContacts").append(formattedGit, formattedlinkedIn, formattedTweety);
+		$("#footerContacts").append(formattedGit, formattedlinkedIn);
 	};
 
 };
@@ -220,7 +220,7 @@ function inName(name){
 };
 
 $("#main").append(internationalizeButton);
-$("#mapDiv").append(googleMap);
+//$("#mapDiv").append(googleMap);
 
 bio.display();
 work.display();
