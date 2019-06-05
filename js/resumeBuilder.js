@@ -18,11 +18,18 @@ var bio = {
 
 var work = {
 	"jobs" : [
+		{
+			"employer" : "Spindustry Interactive",
+			"title" : "Software Developer",
+			"location": "Des Moines, IA",
+			"dates" : "2015-2018",
+			"description" :	"I developed websites for clients using C#, MVC5, HTML5, CSS, jQuery, TypeScript, and SQL. I completed an in0troduction to Android App development, and am now continuing to learn Kotlin. I completed in-house application to allow team members to build a website locally without needing a copy of Visual Studio, which helped cut down needs for licenses, and saved time from opening an instance of Visual Studio.",
+		},
 	{
 		"employer" : "TMC Transportation",
 		"title" : "Software Developer",
 		"location" : "Ankeny, IA",
-		"dates" : "2015 - ",
+		"dates" : "2015 - 2018",
 		"description" : "Developing custom software for in house application to manage all facets of the business of the company using .Net C#, JavaScript and SQL."
 	},
 	{
