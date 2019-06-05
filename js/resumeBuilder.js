@@ -1,13 +1,12 @@
 var bio = {
 	"name" : "Doug Stubbs",
-	"role" : "Web Developer",
+	"role" : "Software Developer",
 	"bioPic" : "images/bmf.JPG",
 	"welcomeMessage" : "An experienced IT professional with proven skills in web development, desktop support, and helpdesk. Self-starter with a passion to initiate action through concise communication and collaboration within a team environment. A non-stop learner.",
 	"contacts" : [{
-		"mobile" : "515-867-5309",
-		"email" : "stubbs.doug@gmail.com",
+		"mobile" : "<a href='tel:+1515-491-9020'>515-491-9020</a>",
+		"email" : "<a href='mailto:stubbs.doug@gmail.com'>stubbs.doug@gmail.com</a>",
 		"github" : "<a href='https://github.com/Vashabrim'>vashabrim</a>",
-		"twitter" : "<a href='https://twitter.com/1TrueDAS'>@1TrueDAS</a>",
 		"location" : "Des Moines",
 		"linkedIn" : "<a href='https://www.linkedin.com/pub/doug-stubbs/90/986/834'>Doug Stubbs</a>"
 	}],
